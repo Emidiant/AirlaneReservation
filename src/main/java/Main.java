@@ -36,6 +36,8 @@ public class Main {
         Crew crew1 = new Crew(1, "1", workers);
         airplane1.setCrewNumber(crew1, airplanes);
 
+        crew1.getFlightDataByNumber(airplanes);
+
         //view ship crew
         System.out.println(crew1.toString());
 
