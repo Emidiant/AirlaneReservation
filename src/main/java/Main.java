@@ -29,17 +29,19 @@ public class Main {
         workers.add(crewMember3);
         workers.add(crewMember4);
 
+        airplanes.add(airplane1);
+        airplanes.add(airplane2);
+        airplanes.add(airplane3);
+
         Crew crew1 = new Crew(1, "1", workers);
-        airplane1.setCrewNumber(crew1);
+        airplane1.setCrewNumber(crew1, airplanes);
 
         //view ship crew
         System.out.println(crew1.toString());
 
 
 
-        airplanes.add(airplane1);
-        airplanes.add(airplane2);
-        airplanes.add(airplane3);
+
 
         Passenger passenger1 = new Passenger("Sergeeva", "Julia", "Dmitrievna",
                 "SPB", "MSK", 30000);

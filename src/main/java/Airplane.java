@@ -162,12 +162,22 @@ public class Airplane {
     /**
      * @param crew current crew for new flight
      */
-    public void setCrewNumber(Crew crew){
+    public void setCrewNumber(Crew crew, ArrayList<Airplane> airplanes){
         if (crew.getStaffSize() < 5){
             System.out.println("insufficient crew");
         } else {
-            this.crewNumber = crew.getCrewNumber();
+            for (Airplane a : airplanes){
+                if (a.getCrewNumber() == crew.getCrewNumber()){
+                    System.out.println("this crew is busy");
+                } else {
+                    this.crewNumber = crew.getCrewNumber();
+                }
+            }
         }
+    }
+
+    public Integer getCrewNumber() {
+        return crewNumber;
     }
 
     /**
