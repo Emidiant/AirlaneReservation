@@ -27,6 +27,14 @@ public class Crew {
         this.flightNumber = flightNumber;
     }
 
+    public void getFlightDataByNumber(ArrayList<Airplane> airplanes){
+        for (Airplane a : airplanes){
+            if (a.getFlightNumber().equals(this.flightNumber)){
+                System.out.println(a.toString());
+            }
+        }
+    }
+
     public Integer getStaffSize() {
         return this.staff.size();
     }
