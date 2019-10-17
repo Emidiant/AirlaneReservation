@@ -15,6 +15,28 @@ public class Main {
         Airplane airplane2 = new Airplane("KLG", "MSK", "2", "Boeing B767-300", 20201002, "1720", "0020");
         Airplane airplane3 = new Airplane("SPB", "MSK", "3", "Boeing B737-800", 20201002, "1720", "1820");
 
+        Passenger crewMember1 = new Passenger();
+        Passenger crewMember2 = new Passenger();
+        Passenger crewMember3 = new Passenger();
+        Passenger crewMember4 = new Passenger();
+        crewMember1.setStaff("Ivanov", "Petr", "Andreevich", 1000);
+        crewMember2.setStaff("Sidorov", "Oleg", "Mihailovich", 1001);
+        crewMember3.setStaff("Petrov", "Sergey", "Dmitrievich", 1002);
+        crewMember4.setStaff("Lipnin", "Evgeniy", "Olegovich", 1003);
+        ArrayList<Passenger> workers = new ArrayList<>();
+        workers.add(crewMember1);
+        workers.add(crewMember2);
+        workers.add(crewMember3);
+        workers.add(crewMember4);
+
+        Crew crew1 = new Crew(1, "1", workers);
+        airplane1.setCrewNumber(crew1);
+
+        //view ship crew
+
+        System.out.println(crew1.toString());
+
+
 
         airplanes.add(airplane1);
         airplanes.add(airplane2);
