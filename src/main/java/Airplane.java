@@ -8,6 +8,7 @@ public class Airplane {
     private String currentLocation;
     private String destination;
     private String flightNumber;
+    private Integer crewNumber;
     private String model; //определяет количество мест на борту
     private Integer flightStartDate;
     private String flightFinishTime;
@@ -156,6 +157,13 @@ public class Airplane {
             hours -= 1;
         }
         return Math.round(((double) hours + (double) mins / 60) * 100.0) / 100.0;
+    }
+
+    /**
+     * @param crew current crew for new flight
+     */
+    public void setCrewNumber(Crew crew){
+        this.crewNumber = crew.getCrewNumber();
     }
 
     /**

@@ -9,6 +9,10 @@ public class Passenger {
     private String currentLocation;
     private String destination;
     private Integer budget;
+    private Integer personalNumber;
+
+    public Passenger(){
+    }
 
     /**
      *
@@ -26,6 +30,20 @@ public class Passenger {
         this.currentLocation = currentLocation;
         this.destination = destination;
         this.budget = budget;
+    }
+
+    /**
+     *
+     * @param secondName staff's secondName
+     * @param firstName staff's name
+     * @param middleName staff's middleName
+     * @param personalNumber staff's number
+     */
+    public void setStaff(String secondName, String firstName, String middleName, Integer personalNumber) {
+        this.secondName = secondName;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.personalNumber = personalNumber;
     }
 
     public String getSecondName() {
@@ -74,6 +92,10 @@ public class Passenger {
 
     public void setBudget(Integer budget) {
         this.budget = budget;
+    }
+
+    public Integer getPersonalNumber() {
+        return personalNumber;
     }
 
     @Override
