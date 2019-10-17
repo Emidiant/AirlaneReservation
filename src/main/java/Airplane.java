@@ -163,7 +163,11 @@ public class Airplane {
      * @param crew current crew for new flight
      */
     public void setCrewNumber(Crew crew){
-        this.crewNumber = crew.getCrewNumber();
+        if (crew.getStaffSize() < 5){
+            System.out.println("insufficient crew");
+        } else {
+            this.crewNumber = crew.getCrewNumber();
+        }
     }
 
     /**

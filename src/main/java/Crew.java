@@ -27,7 +27,11 @@ public class Crew {
         this.flightNumber = flightNumber;
     }
 
-    public void getStuff(ArrayList<Passenger> staff){
+    public Integer getStaffSize() {
+        return this.staff.size();
+    }
+
+    public void getStaffString(ArrayList<Passenger> staff){
         for (Passenger p : staff){
             System.out.println(p.getSecondName() + ", " + p.getFirstName() + ", " +
                     p.getMiddleName() + ", " + p.getPersonalNumber());
@@ -38,8 +42,8 @@ public class Crew {
 
     @Override
     public String toString() {
-        System.out.println("Stuff{");
-        getStuff(this.staff);
+        System.out.println("Staff{");
+        getStaffString(this.staff);
         System.out.println("}");
         return "Crew{" +
                 "crewNumber=" + crewNumber +

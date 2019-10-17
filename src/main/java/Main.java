@@ -33,7 +33,6 @@ public class Main {
         airplane1.setCrewNumber(crew1);
 
         //view ship crew
-
         System.out.println(crew1.toString());
 
 
