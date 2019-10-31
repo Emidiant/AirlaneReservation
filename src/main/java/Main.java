@@ -66,7 +66,7 @@ public class Main {
         Ticket ticket = new Ticket();
         airplanes = ticket.search(passenger1, airplanes);
         airplanes = ticket.search(passenger2, airplanes);
-
+        System.out.println("gi");
         for (Airplane airplane: airplanes) {
             System.out.println("FlightNumber" + airplane.getFlightNumber() + ", Available Business Places: "
                     + airplane.getAvailableBusinessPlaces());
